@@ -6,12 +6,7 @@
 		<script src="snap.svg.js"></script>	<!-- Libreria Snap.svg.js -->
 	</head>
 	<body>
-		<label for="col1">Triangolo Inferiore</label>
-		<select id="col1"></select>
-		<label for="col2">Triangolo Superiore</label>
-		<select id="col2"></select>
-		<button>OK</button>
-		<hr>
+
 		<div id="svgdiv"></div>		<!-- DIV dove lavorare con gli SVG -->
 		
 		<br>
@@ -20,20 +15,7 @@
 		<img id="cmd_grigio" border=1 src="93 grigio perla.jpg" width="20" height="20" >		
 		
 		<script>
-			$(function(){
-				var colori = [
-					{id:'bianco', text:'Bianco'},
-					{id:'nero', text:'Nero antracite'},
-					{id:'grigio', text:'Grigio perla'}
-				];
-				var col1 = $('#col1');
-				var col2 = $('#col2');
-				$.each(colori, function(key, value){
-					var opt = $('<option />').attr('value', value.id).text(value.text);
-					col1.append(opt.clone());
-					col2.append(opt.clone());
-				});
-				
+			$(function(){		
 				var svgdiv = $('#svgdiv');
 				
 				var sopra, sotto;
@@ -51,18 +33,7 @@
 					sotto = draw.select('#sotto').attr({
 						fill : 'url(#nero)'
 					});	
-					
-					$("#col1").change(function () {
-						sopra.attr({
-							fill : 'url(#' + this.value + ')'
-						});
-					});
-					$("#col2").change(function () {
-						sotto.attr({
-							fill : 'url(#' + this.value + ')'
-						});
-					});
-					
+										
 					var selected = 0;
 					var poligono;
 					var area;
