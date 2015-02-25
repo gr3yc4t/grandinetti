@@ -33,6 +33,9 @@
 			die("Errore query " . $db->error);
 		}
 
+		if(empty($result))
+			die("Risultato vuoto");
+
 		$row = $result->fetch_assoc();
 
 		echo " Result : " . $result;
