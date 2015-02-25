@@ -31,10 +31,10 @@
 			die("Errore query " . $db->error);
 		}
 
-		$row = $result->fetch_assoc();
+		$row = $result->fetch_array();
 
-		echo $result;
-
+		echo " Result : " . $result;
+		echo "<br> Row : " . $row;
 
 	}
 
