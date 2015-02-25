@@ -15,9 +15,9 @@
 		<div id="svgdiv"></div>		<!-- DIV dove lavorare con gli SVG -->
 		
 		<br>
-		<img id="cmd_bianco" border=1 src="78 bianco.jpg" width=20 height=20 >
-		<img id="cmd_nero" border=1 src="83 nero antracite.jpg" width=20 height=20 >
-		<img id="cmd_grigio" border=1 src="93 grigio perla.jpg" width=20 height=20 >		
+		<img id="cmd_bianco" border=1 src="78 bianco.jpg" width="20" height="20" >
+		<img id="cmd_nero" border=1 src="83 nero antracite.jpg" width="20" height="20" >
+		<img id="cmd_grigio" border=1 src="93 grigio perla.jpg" width="20" height="20" >		
 		
 		<script>
 			$(function(){
@@ -67,13 +67,13 @@
 					var poligono;
 					var area;
 					$("#sotto").click( function () {
-						$(this).css({ opacity: 0.5 });
+						$(this).css({ opacity: 0.5 });						$("#sopra").css({ opacity: 1.0 });						
 						selected = 1;
 						poligono = sotto;
 						area = $(this);
 					});
 					$("#sopra").click( function () {
-						$(this).css({ opacity: 0.5 });
+						$(this).css({ opacity: 0.5 });						$("#sotto").css({ opacity: 1.0});
 						selected = 1;
 						poligono = sopra;
 						area = $(this);						
