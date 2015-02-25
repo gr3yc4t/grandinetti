@@ -3,7 +3,7 @@
 <?php 
 	require_once("lib.php");
 
-	echo getMattonellaElements($_GET['id']);
+	echo getMattonellaColors($_GET['id']);
 
 ?>
 

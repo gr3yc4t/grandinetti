@@ -22,7 +22,21 @@
 
 	}
 
+	function getMattonellaColors($codice_mattonella){
+		$db = connect();
 
+		$codice_mattonella = $db->real_escape_string($codice_mattonella);
+		$sql = "SELECT codice_colore FROM colori_disponibili WHERE codice_mattonella = $id_mattonella";
+		if(!$result = $db->query($sql)){
+			die("Errore query " . $db->error);
+		}
+
+		$row = $result->fetch_assoc();
+
+		echo $result;
+
+
+	}
 
 
 ?>
