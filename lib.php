@@ -26,7 +26,7 @@
 		$db = connect();
 
 		$codice_mattonella = $db->real_escape_string($codice_mattonella);
-		$sql = "SELECT codice_colore FROM colori_disponibili WHERE codice_mattonella = $id_mattonella";
+		$sql = "SELECT codice_colore FROM colori_disponibili WHERE codice_mattonella = $codice_mattonella";
 		if(!$result = $db->query($sql)){
 			die("Errore query " . $db->error);
 		}
