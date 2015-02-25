@@ -6,20 +6,17 @@
 		<script src="snap.svg.js"></script>	<!-- Libreria Snap.svg.js -->
 	</head>
 	<body>
-		<table>			<td>
-				<div id="svgdiv"></div>		<!-- DIV dove lavorare con gli SVG -->			</td>			<td>				<tr>					<img id="cmd_bianco" border=1 src="78 bianco.jpg" width="20" height="20" >					<img id="cmd_nero" border=1 src="83 nero antracite.jpg" width="20" height="20" >				</tr>				<tr>					<img id="cmd_grigio" border=1 src="93 grigio perla.jpg" width="20" height="20" >					<img id="cmd_prova1" border=1 src="93 grigio perla.jpg" width="20" height="20" >					</tr>			</td>
+		<table>			<tr>
+				<div id="svgdiv"></div>		<!-- DIV dove lavorare con gli SVG -->			</tr>			<tr>				<td>					<img id="cmd_bianco" border=1 src="78 bianco.jpg" width="20" height="20" >					<img id="cmd_nero" border=1 src="83 nero antracite.jpg" width="20" height="20" >				</td>				<td>					<img id="cmd_grigio" border=1 src="93 grigio perla.jpg" width="20" height="20" >					<img id="cmd_prova1" border=1 src="93 grigio perla.jpg" width="20" height="20" >					</td>			</tr>
 		</table>
 		<script>
-			$(function(){		
+			$(function(){		
 				var svgdiv = $('#svgdiv');
-				
 				var sopra, sotto;
-				
 				//Effettuo una richiesta GET e salvo il contenuto in "svgDoc". In pratica salvo l'immagine SVG nella variabile "svgDoc"
 				$.get('base.svg', function(svgDoc){
 					var importedSVGRootElement = document.importNode(svgDoc.documentElement, true);	
-					svgdiv.append(importedSVGRootElement);	//Aggiungo l'immagine al DIV
-					
+					svgdiv.append(importedSVGRootElement);	//Aggiungo l'immagine al DIV
 					var draw = Snap(svgdiv[0]);
 					sopra = draw.select('#sopra').attr({
 						fill: 'url(#bianco)'
