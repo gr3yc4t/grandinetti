@@ -27,13 +27,13 @@
 
 		$codice_mattonella = $db->real_escape_string($codice_mattonella);
 
-		echo $codice_mattonella;
+		//echo $codice_mattonella;
 		$sql = "SELECT codice_colore FROM colori_disponibili WHERE codice_mattonella = '$codice_mattonella'";
 		if(!$result = $db->query($sql)){
 			die("Errore query " . $db->error);
 		}
 
-		$row = $result->fetch_array();
+		$row = $result->fetch_assoc();
 
 		echo " Result : " . $result;
 		echo "<br> Row : " . $row;
