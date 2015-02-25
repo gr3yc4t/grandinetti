@@ -28,22 +28,29 @@
 		$codice_mattonella = $db->real_escape_string($codice_mattonella);
 
 		//echo $codice_mattonella;
-		$sql = "SELECT codice_colore FROM colori_disponibili WHERE codice_mattonella = '$codice_mattonella'";
+		$sql = "SELECT codice_colore FROM colori_disponibili WHERE codice_mattonella = $codice_mattonella";
 		if(!$result = $db->query($sql)){
 			die("Errore query " . $db->error);
 		}
 
-		if(empty($result))
-			die("Risultato vuoto");
+		$row = $result->fetch_array();
 
-		$row = $result->fetch_assoc();
 
-		echo " Result : " . $result;
-		echo "<br> Row : " . $row;
+		while ($row=mysqli_fetch_row($result)){
+	    	$colors[] += $row[0];
+	    }
 
-		return $row;
-
+		return $colors;
 	}
 
+
+	function getColorInfo($id_color){
+		$db = connect();
+
+		$id_color = $db->real_escape_string($id_color);
+
+		
+
+	}
 
 ?>
