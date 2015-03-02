@@ -7,7 +7,6 @@
 	error_reporting(E_ERROR | E_PARSE);
 	ini_set('display_errors', 1);
 
-	
 	/**
 	**	dbg
 	**	@param $text Il testo da visualizzare
@@ -15,12 +14,14 @@
 	**	Questa funzione serve per il debug : se allo script viene passato il 
 	**	parametro GET 'd' essa stampa le stringhe inserite come parametro
 	**/
+
 	
 	function dbg($text){
 		if(isset($_GET['d'])){
 			echo "<p>DEBUG : " . $text . "</p>";
 		}
 	}
+
 
 
 	/**
@@ -34,11 +35,13 @@
 	function getMattonellaElements($id_mattonella){
 		global $db;
 
-		$id_mattonella = mysqli_real_escape_string($id_mattonella);
+		$id_mattonella = mysqli_real_escape_string($db, $id_mattonella);
+
 		$sql = "SELECT n_poligoni FROM mattonelle WHERE ID = $id_mattonella";
 		if(!$result = $db->query($sql)){
 			die("getMattonellaElements Errore query " . $db->error);
 		}
+		$db->close();
 
 		if($result->num_rows != 1){
 			die("Errore Strutturale");
@@ -63,6 +66,7 @@
 	**/
 
 	function getMattonellaColors($codice_mattonella){
+
 		global $db;
 		$codice_mattonella = mysqli_real_escape_string($codice_mattonella);
 
@@ -187,13 +191,25 @@
 
 		}
 
-
 	}
 
 
+	function getColorInfo($id_color){
+		global $db;
+		$id_color = $db->real_escape_string($id_color);
 
+		$sql = "SELECT name, filename, alias FROM colors WHERE ID = $id_color";
+		if(!$result = $db->query($sql)){
+			die("getColorInfo Errore query " . $db->error);
+		}
+		
+		$row = $result->fetch_assoc();
 
+		return $row;
+	}
+	
 
+	
 	function injectSVGColors(){
 
 
