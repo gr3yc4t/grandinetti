@@ -3,17 +3,17 @@
 	<!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
 	<defs>
 		<pattern id="bianco" patternUnits="userSpaceOnUse" width="709" height="709">
-			<image xlink:href="trame/78 bianco.jpg" x="0" y="0" width="709" height="709" />
+			<image xlink:href="78 bianco.jpg" x="0" y="0" width="709" height="709" />
 		</pattern>
 	</defs>
 	<defs>
 		<pattern id="nero" patternUnits="userSpaceOnUse" width="709" height="709">
-			<image xlink:href="trame/83 nero antracite.jpg" x="0" y="0" width="709" height="709" />
+			<image xlink:href="83 nero antracite.jpg" x="0" y="0" width="709" height="709" />
 		</pattern>
 	</defs>
 	<defs>
 		<pattern id="grigio" patternUnits="userSpaceOnUse" width="709" height="709">
-			<image xlink:href="trame/93 grigio perla.jpg" x="0" y="0" width="709" height="709" />
+			<image xlink:href="93 grigio perla.jpg" x="0" y="0" width="709" height="709" />
 		</pattern>
 	</defs>	
 	<g>

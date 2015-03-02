@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--Produced by application: CadLibConv 1.0.0.0-->
+<!--Library: www.CoolUtils.com WW.Cad 4.0.35.105-->
+<!--Creation date: 02/21/2015 10:34:14-->
+<svg width="21cm" height="29.7cm" viewBox="0 0 2098 2969.3" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g stroke-width="2">
+    <path d="M1898.04 200L1898.04 1898.04L200 1898.04L200 200L1898.04 200" fill="#FF0000" stroke="#000000" />
+    <path d="M200 1898.04L1898.04 1898.04" fill="#00FF00" stroke="#000000" />
+    <path d="M200 200L692.43 692.43" fill="#0000FF" stroke="#000000" />
+    <path d="M692.43 692.43L1898.04 200" fill="#FFFF00" stroke="#000000" />
+    <path d="M692.43 692.43L200 1898.04" fill="#FF00FF" stroke="#000000" />
+    <path d="M1898.04 1898.04L1405.61 1405.61" fill="#FFFFFF" stroke="#000000" />
+    <path d="M1405.61 1405.61L1898.04 200" fill="#000000" stroke="#000000" />
+    <path d="M1405.61 1405.61L200 1898.04" fill="#FF3366" stroke="#000000" />
+  </g>
+</svg>
