@@ -2,46 +2,29 @@
 	require_once("lib.php");
 
 	isset($_GET['id']) or die("Inserire ID");
-	
-	$mattonella = new Mattonella($_GET['id']);   //al termine ho la classe mattonella con tutti i parametri letti dal db
-	
-	dbg($mattonella->getName());
+	$mattonella = new Mattonella($_GET['id']); //al termine ho la classe mattonella con tutti i parametri letti dal db
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="https://code.jquery.com/jquery-2.1.3.js"></script> <!-- Librerie jQuery -->
 		<meta charset="UTF-8" />
-		<script src="snap.svg.js"></script>	<!-- Libreria Snap.svg.js -->
-		
-		<style>
-			.selected{
-				    opacity: 0.4;
-					filter: alpha(opacity=40); /* For IE8 and earlier */
-			}
-			.selettori{
-				border-style: solid;
-				border-width: 1px;	
-				height: 20px;
-				width: 20px;
-			}
-		</style>
-		
+		<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+		<script src="js/snap.svg.js"></script>
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<div id="svgdiv"></div>		<!-- DIV dove lavorare con gli SVG -->
-			<?php
-				foreach($mattonella->getColors() as $col){
-					$info = getColorInfo($col);
-
-					$alias = $info->alias;
-					$filename = $info->filename;
-					$name = $info->name;
-			?>
-					<img data-alias="<?=htmlentities($alias)?>" data-name="<?=htmlentities($name)?>" class="selettori" src="trame/<?=$filename?>" />
-			<?php
-				}
-			?>
+		<div id="svgdiv"></div><!-- DIV dove lavorare con gli SVG -->
+		<?php
+			foreach($mattonella->getColors() as $col){
+				$info = getColorInfo($col);
+				$alias = $info->alias;
+				$filename = $info->filename;
+				$name = $info->name;
+		?>
+				<img data-alias="<?=htmlentities($alias)?>" data-name="<?=htmlentities($name)?>" class="selettori" src="trame/<?=$filename?>" />
+		<?php
+			}
+		?>
 		<script>
 			$(function(){
 				var svgdiv = $('#svgdiv');
@@ -79,8 +62,8 @@
 							alert('Devi selezionare qualcosa!');
 						}
 					});
-			}, 'xml');
-		});
+				}, 'xml');
+			});
 		</script>
 	</body>
 </html>
