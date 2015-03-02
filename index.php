@@ -1,5 +1,6 @@
-<?php 
-	require_once("lib.php");
+<?php
+	require_once("config.php");
+	require_once("mattonella.php");
 
 	isset($_GET['id']) or die("Inserire ID");
 	$mattonella = new Mattonella($_GET['id']); //al termine ho la classe mattonella con tutti i parametri letti dal db
