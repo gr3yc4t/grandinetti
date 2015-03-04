@@ -12,3 +12,9 @@
 	if($db->connect_errno){
 		die("Errore connessione al database");
 	}
+	
+	
+	function dbg($text){
+		if(isset($_GET['d']))
+			echo "<p><b>DEBUG</b> $text </p>";
+	}
