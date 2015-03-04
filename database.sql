@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `mattonelle` (
 --
 
 INSERT INTO `mattonelle` (`ID`, `Nome`, `n_poligoni`, `svg`) VALUES
-(1, 'Base', 2, 'bck_base.svg'),
+(1, 'Base', 2, 'base.svg'),
 (2, 'Base 2', 5, 'base_2.svg');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
