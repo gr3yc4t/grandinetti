@@ -1,21 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="mattonella" width="709" height="709" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
-	<defs>
-		<pattern id="bianco" patternUnits="userSpaceOnUse" width="709" height="709">
-			<image xlink:href="trame/78 bianco.jpg" x="0" y="0" width="709" height="709" />
-		</pattern>
-	</defs>
-	<defs>
-		<pattern id="nero" patternUnits="userSpaceOnUse" width="709" height="709">
-			<image xlink:href="trame/83 nero antracite.jpg" x="0" y="0" width="709" height="709" />
-		</pattern>
-	</defs>
-	<defs>
-		<pattern id="grigio" patternUnits="userSpaceOnUse" width="709" height="709">
-			<image xlink:href="trame/93 grigio perla.jpg" x="0" y="0" width="709" height="709" />
-		</pattern>
-	</defs>	
+
 	<g>
 		<path id="p0" class="poligono" d="m-0.016515 1.7596c-0.35744 180.49-0.10674 361.08-0.093855 541.6 0.09777 53.161-0.009212 106.32 0.35232 159.48 3.1462 3.24 3.9014-4.73 5.4074-6.68 66.394-162.12 132.5-324.37 198.78-486.56 2.97-5.71-4.86-8.61-7.46-12.57-64.76-65.45-129.83-130.58-195.1-195.52-0.7659-0.66167-1.281-0.289-1.8865 0.2496z"/>
 		<path id="p1" class="poligono" d="m1.9051 0.084568c1.5476 5.137 8.1079 8.5509 11.497 13.039 62.905 62.834 124.87 126.63 188.75 188.48 2.3211 2.8682 5.5272 5.0167 8.9394 2.3182 136.99-56.03 274.06-112.01 411.07-167.97 27.06-11.432 54.73-21.784 81.59-33.762 1.43-4.0184-5.71-1.5564-7.81-2.2889-231.03-0.47261-462.06-0.20996-693.08-0.28212l-0.9104 0.44572-0.0445 0.021868z"/>
@@ -24,5 +7,3 @@
 		<path id="p4" class="poligono" d="m706.93 4.8946c-68.34 165.85-135.77 332.06-203.81 498.02 5.8667 8.3062 14.706 15.017 21.706 22.716 60.732 60.64 121.45 121.3 182.2 181.92 4.3917-0.27248 1.0642-8.5475 2.1062-12.003 0.286-230.06 0.0847-460.12 0.0996-690.18 0.0533-1.2582-1.8708-1.6493-2.3044-0.46759z"/>
 			
 	</g>
-
-</svg>

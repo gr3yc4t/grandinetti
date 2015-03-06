@@ -1,24 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="mattonella" width="500" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
-	<defs>
-		<pattern id="bianco" patternUnits="userSpaceOnUse" width="709" height="709">
-		<image xlink:href="trame/78 bianco.jpg" x="0" y="0" width="709" height="709" />
-		</pattern>
-	</defs>
-	<defs>
-		<pattern id="nero" patternUnits="userSpaceOnUse" width="709" height="709">
-		<image xlink:href="trame/83 nero antracite.jpg" x="0" y="0" width="709" height="709" />
-		</pattern>
-	</defs>
-	<defs>
-		<pattern id="grigio" patternUnits="userSpaceOnUse" width="709" height="709">
-		<image xlink:href="trame/93 grigio perla.jpg" x="0" y="0" width="709" height="709" />
-		</pattern>
-	</defs>
 
 	<g>
-		<path id="p0" class="poligono" d="m0.000586,499.457672l0,-499.45858l499.286127,499.45858l-499.286127,0z" stroke-width="0" />
+		<path id="p0" class="poligono" "d="m0.000586,499.457672l0,-499.45858l499.286127,499.45858l-499.286127,0z" stroke-width="0" />
 		<path id="p1" class="poligono" d="m0.374221,500.836487l0,-500.463097l499.286119,500.463097l-499.286119,0z" stroke-width="0" transform="rotate(180, 250.018, 250.605)" />
 	</g>
-</svg>
+
