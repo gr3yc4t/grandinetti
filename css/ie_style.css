@@ -28,8 +28,8 @@
 				border-style: solid;
 				border-width: 2px;	
 				border-color: #a00; */
-				width:50%; 
-				height:50%;
+				width:50vw; 
+				height:48.88vw;
 				margin-right: 0.5%;
 				margin-left: 0.5%;
 				box-shadow: 3px 3px 5px 2px #333333;
@@ -96,10 +96,10 @@
 			  padding: 2%;
 			  color: #333;
 			  background: #aa3333;
-			  border-radius: 10px;
 			  box-shadow: 5px 5px 10px 2px #333333;
 			  -webkit-box-shadow: 5px 5px 10px 2px #333333;
 			  -moz-box-shadow: 5px 5px 10px 2px #333333;
+			  border-radius: 10px;
 			}
 			 
 			#sidebar {
@@ -115,8 +115,8 @@
 			  padding: 2%;
 			  color: #fff;
 			  background: #aa3333;
-			  border-radius: 10px;
 			  box-shadow: 5px 5px 10px 2px #333333;
 			  -webkit-box-shadow: 5px 5px 10px 2px #333333;
-			  -moz-box-shadow: 5px 5px 10px 2px #333333;			  
+			  -moz-box-shadow: 5px 5px 10px 2px #333333;
+			  border-radius: 10px;
 			}
