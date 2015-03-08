@@ -1,6 +1,5 @@
 			html,body { height:100%; } 
 			
-			
 			#mattonella{
 			width:100%;
 			height:100%;
@@ -23,7 +22,7 @@
 			}
 			
 			.contenuto{ 
-				background-color: #CF7C7C; 
+				background-color: #999999; 
 				/* non mi piace il bordo
 				border-style: solid;
 				border-width: 2px;	
@@ -49,6 +48,7 @@
 				    opacity: 0.4;
 					filter: alpha(opacity=40); /* For IE8 and earlier */
 			}
+			
 			.selettori{
 				/*border-style: solid;
 				border-width: 2px;	
@@ -68,22 +68,7 @@
 				-webkit-box-shadow: 3px 3px 5px 2px #333333;
 				-moz-box-shadow: 3px 3px 
 			}
-			
-			.mostra_sezioni{
-				border-style: solid;
-				height: 30px;
-				width: auto;
-				margin: 12px 12px 12px 12px;
-				background-color : #a00;
-				color : white;
-				font-weight : bold;
-				text-align: center;
-				border-radius: 10px;
-				box-shadow: 3px 3px 5px 2px #333333;
-				-webkit-box-shadow: 3px 3px 5px 2px #333333;
-				-moz-box-shadow: 3px 3px 5px 2px #333333;
-			}
-			
+						
 			#content {
 			  /* float: left; */ 
 			  width: 25%;
@@ -107,12 +92,11 @@
 			  width: 25%;
 			  margin: 0;
 			  padding: 0;
-			  
 			}
 			 
 			#sidebar .inner {
 			  margin-right: 0px;
-			  padding: 2%;
+			  padding: 0.5% 2% 2.5%;
 			  color: #fff;
 			  background: #aa3333;
 			  border-radius: 10px;
@@ -120,3 +104,62 @@
 			  -webkit-box-shadow: 5px 5px 10px 2px #333333;
 			  -moz-box-shadow: 5px 5px 10px 2px #333333;			  
 			}
+			
+			.mostra_sezioni{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 14px;
+				font-weight : bold;
+				text-align: center;
+				color: #fafafa;
+				padding: 10px 20px;
+				/* Mozilla Firefox */
+				background: -moz-linear-gradient(
+					top,
+					#dd7777 0%,
+					#cc5555 50%,
+					#aa3333 50%,
+					#881111);
+				/* Webkit (Safari/Chrome 10) */
+				background: -webkit-gradient(
+					linear, left top, left bottom,
+					from(#dd7777),
+					color-stop(0.50, #cc5555),
+					color-stop(0.50, #aa3333),
+					to(#881111));
+				/* IE */
+				background: -ms-linear-gradient(
+					top,
+					#dd7777 0%,
+					#cc5555 50%,
+					#aa3333 50%,
+					#881111);
+				/* Opera */ 
+				background: -o-linear-gradient(
+					top,
+					#dd7777 0%,
+					#cc5555 50%,
+					#aa3333 50%,
+					#881111);
+				/* Webkit (Chrome 11+) */ 
+				background: -webkit-linear-gradient(
+					top,
+					#dd7777 0%,
+					#cc5555 50%,
+					#aa3333 50%,
+					#881111);
+				-moz-border-radius: 10px;
+				-webkit-border-radius: 10px;
+				border-radius: 10px;
+				border: 1px solid #949494;
+				-moz-box-shadow:
+					0px 1px 3px rgba(000,000,000,0.5),
+					inset 0px 0px 2px rgba(255,255,255,1);
+				-webkit-box-shadow:
+					0px 1px 3px rgba(000,000,000,0.5),
+					inset 0px 0px 2px rgba(255,255,255,1);
+				box-shadow:
+					0px 1px 3px rgba(000,000,000,0.5),
+					inset 0px 0px 2px rgba(255,255,255,1);
+				text-shadow:
+					0px -1px 0px rgba(000,000,000,0.2),
+				}

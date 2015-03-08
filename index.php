@@ -92,8 +92,22 @@
 						}
 					});
 					
-					//TODO da migliorare
-					$('#cmd_mostra_sez').click(function () {
+					/* mostra bordi */
+					$( window ).ready( bordatura );
+					$('#cmd_mostra_sez').click( bordatura );
+					$('.selettori').click(function(){
+						var pol = $('.poligono', svgdiv);
+						var classe = '';
+						if(show_line){
+						classe = 'poligono mostra_poligono';
+						pol.each(function (){
+								var $this = $(this).attr('class', 'poligono');
+								$this.attr('class', classe);
+						});	
+						}					
+					});
+					
+					function bordatura () {
 						var pol = $('.poligono', svgdiv);
 						var classe = '';
 						if(show_line){
@@ -106,9 +120,8 @@
 						pol.each(function (){
 								var $this = $(this).attr('class', 'poligono');
 								$this.attr('class', classe);
-		
 						});
-					});
+					};
 					
 					
 			}, 'xml');
@@ -118,6 +131,7 @@
 		<div id="sidebar">
 			<div class="inner">
 				<div id="tavolozza">
+					<p id="cmd_mostra_sez" class="mostra_sezioni">Mostra/Nascondi Sezioni</p>
 					<?php
 						foreach($mattonella->getColors() as $col){
 							$info = getColorInfo($col);
@@ -126,11 +140,10 @@
 							$filename = $info->filename;
 							$name = $info->name;
 					?>								
-							<span><img data-alias="<?=htmlentities($alias)?>" data-name="<?=htmlentities($name)?>" class="selettori"  src="trame/<?=$filename?>" /></span>
+							<span><img data-alias="<?=htmlentities($alias)?>" data-name="<?=htmlentities($name)?>" class="selettori" src="trame/<?=$filename?>" /></span>
 					<?php
 						}
 					?>
-					<p id="cmd_mostra_sez" class="mostra_sezioni">Mostra/Nascondi Sezioni</p>
 				</div>
 			</div>
 		</div>
