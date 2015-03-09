@@ -1,5 +1,6 @@
 
 <html lang="it-IT">
+<link rel="icon" href="http://www.grandinetti.it/favicon" />
 <head>
 	<title>Configuratore super-figo</title>
 	<meta charset="UTF-8" />
@@ -14,12 +15,14 @@
 	<!-- Because we love IE -->
 		<style>
 			@media all and (-ms-high-contrast:none)
-			 {
-			 .foo { color: green } /* IE10 */
-			 *::-ms-backdrop, .contenuto { 
-			 width:50vw; 
-			height:48.88vw; } /* IE11 */
-			 }
+			{
+				.contenuto { 
+				width:50vw; 
+				height:50vw; } /* IE10 */
+				*::-ms-backdrop, .contenuto { 
+				width:50vw; 
+				height:48.88vw; } /* IE11 */
+			}
 		 </style>
  </head>
  <body>
