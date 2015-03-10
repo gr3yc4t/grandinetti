@@ -1,18 +1,20 @@
-
+<!DOCTYPE html>
 <html lang="it-IT">
 <link rel="icon" href="http://www.grandinetti.it/favicon" />
 <head>
 	<title>Configuratore super-figo</title>
 	<meta charset="UTF-8" />
-	<script src="https://code.jquery.com/jquery-2.1.3.js"></script> <!-- Librerie jQuery -->
+	<script src="js/jquery-2.1.3.min.js"></script> <!-- Librerie jQuery -->
 	<meta charset="UTF-8" />
 	<script src="snap.svg.js"></script>	<!-- Libreria Snap.svg.js -->
 	<link rel="stylesheet" type="text/css" media="all" href="css/style.css" /> 
-	
+	<script src="js/notify-combined.min.js"></script>
+	<script src="js/pace.min.js"></script>	
+	<link rel="stylesheet" type="text/css" media="all" href="js/loading.css" /> 
 	<!--[if IE]>
 	<link rel="stylesheet" href="css/ie_style.css">
 	<![endif]-->
-	<!-- Because we love IE -->
+	<!-- Because we love IE s-->
 		<style>
 			@media all and (-ms-high-contrast:none)
 			{
@@ -23,13 +25,22 @@
 				width:50vw; 
 				height:48.88vw; } /* IE11 */
 			}
+			@media (max-width: 1000px)
+			{
+				.selettori, .anteprima{	width:28%;}
+			}
+			@media (max-width: 700px){
+				#cmd_mostra_sez { font-size: 0.5em;}
+			}
 		 </style>
  </head>
  <body>
  
  <?php 
 	require_once("lib.php");
-	isset($_GET['id']) or die("Inserire ID");
+	if(!isset($_GET['id'])){
+		$_GET['id'] = "2";
+	}
 	
 	$mattonella = new Mattonella($_GET['id']);   //al termine ho la classe mattonella con tutti i parametri letti dal db
 	dbg($mattonella->getName());
@@ -37,15 +48,14 @@
 		<div id="contenitoreflex"> 
 	<div id="content">
 		<div class="inner">
-			<h3>
-				Questa è una prova, devo scrivere parecchio per controllare il fluid layout
-				Questa è una prova, devo scrivere parecchio per controllare il fluid layout
-				Questa è una prova, devo scrivere parecchio per controllare il fluid layout
-				Questa è una prova, devo scrivere parecchio per controllare il fluid layout
-				Questa è una prova, devo scrivere parecchio per controllare il fluid layout
-				Questa è una prova, devo scrivere parecchio per controllare il fluid layout
-				Questa è una prova, devo scrivere parecchio per controllare il fluid layout
-			</h3>
+				<?php
+				
+					foreach(showMattonellePreview() as $prv){
+				?>								
+						<span><a href="index.php?id=<?=$prv->ID?>"><img class="anteprima"  src="images/<?=htmlentities($prv->preview)?>" /></a></span>
+				<?php
+					}
+				?>
 		</div>
 	</div>
 	
@@ -91,7 +101,12 @@
 								});
 							});
 						}else{
-							alert('Devi selezionare qualcosa!');
+							$(this).notify("Devi selezionare prima una porzione", {
+							  clickToHide: true,
+							  autoHide: true,
+							  autoHideDelay: 2500,
+							  gap: 2
+							});
 						}
 					});
 					
@@ -154,5 +169,3 @@
 		</div> <!-- div flex-->
 </body>
 </html>
-
-

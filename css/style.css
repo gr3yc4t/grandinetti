@@ -49,21 +49,14 @@
 					filter: alpha(opacity=40); /* For IE8 and earlier */
 			}
 			
-			.selettori{
-				/*border-style: solid;
-				border-width: 2px;	
-				border-color: #a00;*/
-				/*height: 80px;*/
+			.selettori, .anteprima{
 				width: 30%;
-				/*margin-top: 2%;
-				margin-left: 2%;
-				margin-right: 2%;*/
 				margin-left: 2%;
 				margin-left-value: 2%;
 				margin-left-ltr-source: physical;
-				margin-left-rtl-source: physical;
+				margin-left-rtl-source: physical;				
 				margin-top: 2%;
-				border-radius: 10px;
+				border-radius: 0.6vw;
 				box-shadow: 3px 3px 5px 2px #333333;
 				-webkit-box-shadow: 3px 3px 5px 2px #333333;
 				-moz-box-shadow: 3px 3px; 
@@ -81,7 +74,7 @@
 			  padding: 2%;
 			  color: #333;
 			  background: #aa3333;
-			  border-radius: 10px;
+			  border-radius: 0.6vw;
 			  box-shadow: 5px 5px 10px 2px #333333;
 			  -webkit-box-shadow: 5px 5px 10px 2px #333333;
 			  -moz-box-shadow: 5px 5px 10px 2px #333333;
@@ -99,12 +92,12 @@
 			  padding: 0.5% 2% 2.5%;
 			  color: #fff;
 			  background: #aa3333;
-			  border-radius: 10px;
+			  border-radius: 0.6vw;
 			  box-shadow: 5px 5px 10px 2px #333333;
 			  -webkit-box-shadow: 5px 5px 10px 2px #333333;
 			  -moz-box-shadow: 5px 5px 10px 2px #333333;			  
 			}
-						
+				
 			.mostra_sezioni{
 				font-family: Arial, Helvetica, sans-serif;
 				font-size: 90%;
@@ -147,9 +140,9 @@
 					#cc5555 50%,
 					#aa3333 50%,
 					#881111);
-				-moz-border-radius: 10px;
-				-webkit-border-radius: 10px;
-				border-radius: 10px;
+				-moz-border-radius: 0.6vw;
+				-webkit-border-radius: 0.6vw;
+				border-radius: 0.6vw;
 				border: 1px solid #949494;
 				-moz-box-shadow:
 					0px 1px 3px rgba(000,000,000,0.5),

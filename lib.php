@@ -102,6 +102,22 @@
 	
 
 	
+	function showMattonellePreview(){
+		global $db;
+		
+		$sql = "SELECT ID, preview FROM mattonelle";
+		if(!$result = $db->query($sql)){
+			die("Errore Preview Mattonelle");
+		}
+
+		$prv_list = array();
+		while ($row = $result->fetch_object()){
+	    	$prv_list[] = $row;
+	    }
+
+		return $prv_list;
+	}
+	
 	/**
 	**	Classe Mattonella
 	**	
