@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>3D Test</title>
+		<link rel="stylesheet" href="css/jquery-ui-1.10.3.min.css" />
+		<link rel="stylesheet" href="css/css.css" />
+		<script src="js/jquery-2.0.3.min.js"></script>
+		<script src="js/jquery-ui-1.10.3.min.js"></script>
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
+		<script src="js/utils.js"></script>
+		<script src="js/three.min.js"></script>
+		<script src="js/OrbitControls.js"></script>
+	</head>
+	<body>
+		<div id="output">
+
+		</div>
+		<div id="control">
+			X: <div id="slx" style="width: 300px"></div></br>
+			Y: <div id="sly" style="width: 300px"></div></br>
+		</div>
+		<script>
+			$(function(){
+				var cnt = $('#output');
+				var ww = cnt.width();
+				var hh = cnt.height();
+				var camera, scene, renderer, controls;
+				var mesh, logotexture;
+
+				$('#slx').slider({
+					change: function(event, ui){
+						logotexture.offset.x = (100-ui.value)/100.0;
+					},
+					slide: function(event, ui){
+						logotexture.offset.x = (100-ui.value)/100.0;
+					},
+					min: 65,
+					max: 85
+				});
+
+				$('#sly').slider({
+					change: function(event, ui){
+						logotexture.offset.y = ui.value/100.0;
+					},
+					slide: function(event, ui){
+						logotexture.offset.y = ui.value/100.0;
+					},
+					min: 10,
+					max: 40
+				});
+
+				init();
+				animate();
+
+				function init(){
+					renderer = new THREE.WebGLRenderer();
+					renderer.setSize(ww, hh);
+      				renderer.setClearColor(0xA3A3A3, 1);
+					cnt.append(renderer.domElement);
+
+					camera = new THREE.PerspectiveCamera(70, ww / hh, 1, 1000);
+					camera.position.x = 136;
+					camera.position.y = 211;
+					camera.position.z = 207;
+
+					scene = new THREE.Scene();
+
+					var geometry = new THREE.BoxGeometry(200, 300, 50);
+
+					var materials = new Array();
+
+					logotexture = THREE.ImageUtils.loadTexture('data/logus.png');
+					logotexture.anisotropy = renderer.getMaxAnisotropy();
+					logotexture.offset.x = 0.35;
+					logotexture.offset.y = 0.1;
+					logotexture.repeat.x = 0.5;
+					logotexture.repeat.y = 0.5;
+
+					var material1 = new THREE.MeshBasicMaterial({map: logotexture});
+					var material2 = createBasicMaterial('data/empty.png');
+					materials.push(material2);
+					materials.push(material2);
+					materials.push(material2);
+					materials.push(material2);
+					materials.push(material1);
+					materials.push(material2);
+
+					var meshFaceMaterial = new THREE.MeshFaceMaterial( materials );
+					mesh = new THREE.Mesh(geometry, meshFaceMaterial);
+					scene.add(mesh);
+
+					controls = new THREE.OrbitControls(camera, renderer.domElement);
+				}
+
+				function animate(){
+					requestAnimationFrame(animate);
+
+					renderer.render(scene, camera);
+					controls.update();
+				}
+
+				function createBasicMaterial(texturePath){
+					var texture = THREE.ImageUtils.loadTexture(texturePath);
+					texture.anisotropy = renderer.getMaxAnisotropy();
+					return new THREE.MeshBasicMaterial({map: texture});
+				}
+			});
+		</script>
+	</body>
+</html>
