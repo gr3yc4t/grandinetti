@@ -2,7 +2,7 @@
 <html lang="it-IT">
 <link rel="icon" href="http://www.grandinetti.it/favicon" />
 <head>
-	<title>Configuratore super-figo</title>
+	<title>Configuratore</title>
 	<meta charset="UTF-8" />
 	<script src="js/jquery-2.1.3.min.js"></script> <!-- Librerie jQuery -->
 	<meta charset="UTF-8" />
