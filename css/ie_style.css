@@ -27,15 +27,15 @@
 				border-style: solid;
 				border-width: 2px;	
 				border-color: #a00; */
-				width:48.5vw; 
-				height:48.5vw;
+				width:50vw; 
+				height:48.88vw;
 				margin-right: 0.5%;
 				margin-left: 0.5%;
 				box-shadow: 3px 3px 5px 2px #333333;
 				-webkit-box-shadow: 3px 3px 5px 2px #333333;
 				-moz-box-shadow: 3px 3px 5px 2px #333333;				
 			}
-
+			
 			
 			.mostra_poligono{
 			   stroke: #a00 !important;
@@ -54,7 +54,7 @@
 				margin-left: 2%;
 				margin-left-value: 2%;
 				margin-left-ltr-source: physical;
-				margin-left-rtl-source: physical;				
+				margin-left-rtl-source: physical;
 				margin-top: 2%;
 				border-radius: 0.6vw;
 				box-shadow: 3px 3px 5px 2px #333333;
@@ -97,7 +97,7 @@
 			  -webkit-box-shadow: 5px 5px 10px 2px #333333;
 			  -moz-box-shadow: 5px 5px 10px 2px #333333;			  
 			}
-				
+						
 			.mostra_sezioni{
 				font-family: Arial, Helvetica, sans-serif;
 				font-size: 90%;

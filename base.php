@@ -13,7 +13,7 @@
 	//Print header
 	?>
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="mattonella" width="709" height="709" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">	
+<svg id="mattonella"  viewBox="0 0 709 709" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">	
 	<?php	
 	
 
